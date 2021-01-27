@@ -11,4 +11,7 @@ phases:
       # Package SAM template
       - sam package --template-file template.yaml --s3-bucket ${PACKAGE_BUCKET} --output-template-file packaged.yaml
       # Deploy packaged SAM template1
-      - sam deploy --template-file packaged.yaml --stack-name test --capabilities CAPABILITY_IAM  
+      #- sam deploy --template-file packaged.yaml --stack-name test --capabilities CAPABILITY_IAM  
+artifacts:
+  files:
+    - packaged.yaml
